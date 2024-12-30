@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #1b2e1f; /* Darker green background */
+            color: #dcdcdc; /* Light gray text for contrast */
+            line-height: 1.6;
+            font-size: 18px;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        body.loaded {
+            opacity: 1;
+        }
+
+        /* Header */
+        header {
+            background-image: url('resources/rude3.JPG'); /* Background image */
+            background-size: cover;
+            background-position: center;
+            color: #ffffff; /* White text */
+            text-align: center;
+            padding: 6rem 2rem;
+            position: relative;
+            background-attachment: fixed;
+            transition: background-size 1s ease;
+            box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.7); /* Subtle shadow */
+        }
+
+        header h1 {
+            font-size: 4rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+        }
+
+        header p {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        /* Profile Section */
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 3rem;
+            background: #2c6b47; /* Darker green */
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+            color: #e0e0e0; /* Lighter gray text */
+        }
+
+        .profile h2 {
+            font-size: 3rem;
+            font-weight: 600;
+            color: #f1f8e9; /* Soft light green */
+        }
+
+        .profile p {
+            font-size: 1.4rem;
+            color: #b0b0b0; /* Light gray for description */
+            line-height: 1.6;
+            margin-top: 1rem;
+        }
+
+        /* Skills Section */
+        .skills {
+            margin-top: 4rem;
+            background: #2c6b47; /* Darker muted green */
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .skills h2 {
+            font-size: 2.8rem;
+            color: #dcdcdc; /* Light gray text for heading */
+            margin-bottom: 1.5rem;
+        }
+
+        .skills ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .skills li {
+            background: #388e3c; /* Deep green */
+            padding: 0.8rem 1.5rem;
+            border-radius: 20px;
+            color: #fff;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .skills li:hover {
+            background: #2c6b47; /* Darker green on hover */
+            transform: scale(1.1);
+        }
+
+        /* Projects Section */
+        .projects {
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .projects h2 {
+            font-size: 3rem;
+            color: #dcdcdc; /* Light gray */
+            margin-bottom: 2rem;
+        }
+
+        .project-list {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .project {
+            background: #4c9a2a; /* Muted green */
+            border-radius: 15px;
+            padding: 2rem;
+            max-width: 300px;
+            flex: 1;
+            margin-bottom: 2rem;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .project h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #2e3b2e; /* Deep green for project titles */
+        }
+
+        .project p {
+            font-size: 1.2rem;
+            color: #ccc; /* Subtle light gray */
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #1b2e1f; /* Dark background */
+            color: #dcdcdc; /* Light gray text */
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        footer a {
+            color: #a5d6a7; /* Subtle green */
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <p>"I'm a Software Developer and Problem Solver"</p>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Profile -->
+        <div class="profile">
+            <h2>Rudrakshi Kapse</h2>
+            <p>I'm a passionate computer science student who loves web development, machine learning, and creating impactful solutions to real-world problems. Let's connect and collaborate!</p>
+        </div>
+
+        <!-- Skills -->
+        <section class="skills">
+            <h2>My Skills</h2>
+            <ul>
+                <li>HTML & CSS</li>
+                <li>JavaScript</li>
+                <li>Java</li>
+                <li>OOP</li>
+                <li>Machine Learning</li>
+                <li>SQL</li>
+                <li>Data Structures</li>
+            </ul>
+        </section>
+
+        <!-- Projects -->
+        <section class="projects">
+            <h2>My Projects</h2>
+            <div class="project-list">
+                <div class="project">
+                    <h3>Hangman Game</h3>
+                    <p>A web-based Hangman game with an interactive virtual keyboard and animations.</p>
+                </div>
+                <div class="project">
+                    <h3>College Software</h3>
+                    <p>A comprehensive software solution for managing faculty, students, and assignments.</p>
+                </div>
+                <div class="project">
+                    <h3>Smart Wardrobe</h3>
+                    <p>A virtual closet and outfit recommendation system with ML integration for personalized suggestions.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Contact me at: <a href="mailto:rudrakshi0404@gmail.com">rudrakshi0404@gmail.com</a> || +91 9300210000</p>
+        <p>Find me on <a href="https://www.linkedin.com">LinkedIn</a></p>
+    </footer>
+
+    <script>
+        // Adding animation on page load
+        window.onload = function() {
+            document.body.classList.add('loaded');
+        }
+    </script>
+</body>
+</html>
