@@ -54,7 +54,7 @@ const About = () => {
             <div className="relative w-full flex justify-center pb-16">
 
               <motion.img
-                src="public/rude.png"
+                src="/public/rude.png"
                 alt="Rude Cutout"
                 className="w-[320px] md:w-[420px] lg:w-[500px] object-contain drop-shadow-[0_25px_40px_rgba(0,0,0,0.5)]"
                 whileHover={{ scale: 1.03 }}
